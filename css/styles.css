@@ -1,0 +1,263 @@
+@import url(reset.css);
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header {
+  background: #ffffff;
+  padding: 32px 0;
+  font-weight: 500;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo img {
+  width: 145px;
+  height: 31px;
+  height: auto;
+}
+
+.header-nav {
+  padding-left: 93px;
+  display: flex;
+  column-gap: 50px;
+}
+
+.header-link {
+  font-size: 14px;
+  color: #212121;
+  text-decoration: none;
+}
+
+.header-link:first-child {
+  color: #2196f3;
+}
+
+.header-nav-right {
+  margin-left: auto;
+  display: flex;
+  column-gap: 50px;
+}
+
+.header-link-right {
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.header-link-right:first-child {
+  color: #2196f3;
+}
+
+.header-link-right:last-child {
+  color: #757575;
+}
+
+.hero {
+  min-height: 600px;
+  background-color: #2f303a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-container {
+  max-width: 700px;
+}
+
+.hero-title {
+  color: #ffffff;
+  font-size: 44px;
+  font-weight: 900;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.hero-button {
+  padding: 16px 32px;
+  background-color: #2196f3;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.hero-btn:hover {
+  background-color: #188ce8;
+}
+
+.shtuki {
+  padding: 94px 0;
+  background-color: #ffffff;
+}
+
+.shtuki-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  gap: 30px;
+}
+
+.shtuki-item {
+  flex: 1;
+}
+
+.shtuki-title {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: #212121;
+}
+
+.shtuki-text {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #757575;
+}
+
+.kartinki {
+  padding: 94px 0;
+  background-color: #ffffff;
+}
+
+.kartinki-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.kartinki-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #212121;
+}
+
+.kartinki-spisok {
+  display: flex;
+  gap: 30px;
+}
+
+.kartinki-item {
+  flex: 1;
+}
+
+.kartinki-img {
+  display: block;
+  width: 100%;
+  height: 294px;
+  object-fit: cover;
+}
+
+.ludi {
+  padding: 94px 0;
+  background-color: #f5f4fa;
+}
+
+.ludi-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.ludi-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #212121;
+}
+
+.ludi-spisok {
+  display: flex;
+  gap: 30px;
+}
+
+.ludi-kartochka {
+  flex: 1;
+  background: #ffffff;
+  border-radius: 0 0 4px 4px;
+  overflow: hidden;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.ludi-photo {
+  display: block;
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.ludi-info {
+  padding: 30px 0;
+  text-align: center;
+}
+
+.ludi-name {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #212121;
+}
+
+.ludi-role {
+  font-size: 16px;
+  color: #757575;
+}
+
+.footer {
+  background-color: #2f303a;
+  padding-top: 60px;
+}
+
+.footer-logo {
+  margin: 0 0 20px;
+}
+
+.footer-logo img {
+  width: 145;
+  height: 31;
+  height: auto;
+}
+
+.footer-text {
+  text-decoration: none;
+  font-size: 14px;
+  margin-top: 20px;
+  padding-bottom: 60px;
+}
+
+.footer-text p:first-of-type {
+  color: #ffffff;
+}
+.footer-text p:nth-of-type(2),
+.footer-text p:nth-of-type(3) {
+  color: #ffffff99;
+}
+
+.footer-text p {
+  margin-bottom: 9px;
+}
+
+.footer-text p:last-of-type {
+  margin-bottom: 0;
+}
