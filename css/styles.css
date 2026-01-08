@@ -1,5 +1,45 @@
 @import url(reset.css);
 
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --blue-color: #2196f3;
+  --black-color: #212121;
+  --dark-grey-color: #2f303a;
+  --light-grey-color: #757575;
+  --white-color: #ffffff;
+  --very-light-grey-color: #f5f4fa;
+}
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -12,9 +52,11 @@ body {
 }
 
 .header {
-  background: #ffffff;
+  background: var(--white-color);
   padding: 32px 0;
   font-weight: 500;
+
+  border-bottom: 1px solid #ececec;
 }
 
 .header-container {
@@ -24,7 +66,7 @@ body {
 
 .header-logo img {
   width: 145px;
-  height: 31px;
+
   height: auto;
 }
 
@@ -36,12 +78,16 @@ body {
 
 .header-link {
   font-size: 14px;
-  color: #212121;
+  color: var(--black-color);
   text-decoration: none;
 }
 
 .header-link:first-child {
-  color: #2196f3;
+  color: var(--blue-color);
+}
+
+.header-link.active {
+  color: var(--light-grey-color);
 }
 
 .header-nav-right {
@@ -56,16 +102,16 @@ body {
 }
 
 .header-link-right:first-child {
-  color: #2196f3;
+  color: var(--blue-color);
 }
 
 .header-link-right:last-child {
-  color: #757575;
+  color: var(--light-grey-color);
 }
 
 .hero {
   min-height: 600px;
-  background-color: #2f303a;
+  background-color: var(--dark-grey-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -77,7 +123,7 @@ body {
 }
 
 .hero-title {
-  color: #ffffff;
+  color: var(--white-color);
   font-size: 44px;
   font-weight: 900;
   line-height: 1.36;
@@ -88,8 +134,8 @@ body {
 
 .hero-button {
   padding: 16px 32px;
-  background-color: #2196f3;
-  color: #ffffff;
+  background-color: var(--blue-color);
+  color: var(--white-color);
   font-size: 16px;
   font-weight: 700;
   border: none;
@@ -98,12 +144,12 @@ body {
 }
 
 .hero-btn:hover {
-  background-color: #188ce8;
+  background-color: var(--blue-color);
 }
 
 .shtuki {
   padding: 94px 0;
-  background-color: #ffffff;
+  background-color: var(--white-color);
 }
 
 .shtuki-container {
@@ -115,7 +161,7 @@ body {
 }
 
 .shtuki-item {
-  flex: 1;
+  flex: 1 1 25%;
 }
 
 .shtuki-title {
@@ -123,18 +169,18 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 10px;
-  color: #212121;
+  color: var(--black-color);
 }
 
 .shtuki-text {
   font-size: 14px;
   line-height: 1.7;
-  color: #757575;
+  color: var(--light-grey-color);
 }
 
 .kartinki {
   padding: 94px 0;
-  background-color: #ffffff;
+  background-color: var(--white-color);
 }
 
 .kartinki-container {
@@ -148,7 +194,7 @@ body {
   font-size: 36px;
   font-weight: 700;
   margin-bottom: 50px;
-  color: #212121;
+  color: var(--black-color);
 }
 
 .kartinki-spisok {
@@ -161,15 +207,15 @@ body {
 }
 
 .kartinki-img {
-  display: block;
   width: 100%;
+  height: 100%;
   height: 294px;
   object-fit: cover;
 }
 
 .ludi {
   padding: 94px 0;
-  background-color: #f5f4fa;
+  background-color: var(--very-light-grey-color);
 }
 
 .ludi-container {
@@ -183,7 +229,7 @@ body {
   font-size: 36px;
   font-weight: 700;
   margin-bottom: 50px;
-  color: #212121;
+  color: var(--black-color);
 }
 
 .ludi-spisok {
@@ -192,8 +238,8 @@ body {
 }
 
 .ludi-kartochka {
-  flex: 1;
-  background: #ffffff;
+  flex: 1 1 25%;
+  background: var(--white-color);
   border-radius: 0 0 4px 4px;
   overflow: hidden;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -208,7 +254,7 @@ body {
 }
 
 .ludi-info {
-  padding: 30px 0;
+  padding: 30px 20px;
   text-align: center;
 }
 
@@ -216,26 +262,26 @@ body {
   font-size: 16px;
   font-weight: 500;
   margin-bottom: 10px;
-  color: #212121;
+  color: var(--black-color);
 }
 
 .ludi-role {
   font-size: 16px;
-  color: #757575;
+  color: var(--light-grey-color);
 }
 
 .footer {
-  background-color: #2f303a;
-  padding-top: 60px;
+  background-color: var(--dark-grey-color);
+  padding: 60px 0;
 }
 
 .footer-logo {
   margin: 0 0 20px;
+  display: inline-block;
 }
 
 .footer-logo img {
-  width: 145;
-  height: 31;
+  width: 145px;
   height: auto;
 }
 
@@ -243,11 +289,10 @@ body {
   text-decoration: none;
   font-size: 14px;
   margin-top: 20px;
-  padding-bottom: 60px;
 }
 
 .footer-text p:first-of-type {
-  color: #ffffff;
+  color: var(--white-color);
 }
 .footer-text p:nth-of-type(2),
 .footer-text p:nth-of-type(3) {
@@ -260,4 +305,75 @@ body {
 
 .footer-text p:last-of-type {
   margin-bottom: 0;
+}
+
+.portfolio {
+  padding: 94px 0;
+}
+
+.portfolio-filters {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 50px;
+}
+
+.filter-btn {
+  padding: 6px 22px;
+  border: none;
+  border-radius: 4px;
+  background: var(--very-light-grey-color);
+  color: var(--black-color);
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: var(--blue-color);
+  color: var(--white-color);
+}
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.portfolio-item {
+  flex: 0 0 30%;
+  background: var(--white-color);
+  border: 1px solid #eeeeee;
+}
+
+.portfolio-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.portfolio-thumb {
+  display: block;
+  width: 100%;
+  height: 294px;
+  object-fit: cover;
+}
+
+.portfolio-info {
+  padding: 20px 24px !important;
+}
+
+.portfolio-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--black-color);
+  margin-bottom: 4px;
+  line-height: 1.2;
+}
+
+.portfolio-type {
+  font-size: 16px;
+  color: var(--light-grey-color);
+  margin: 0;
+  line-height: 1.5;
 }
