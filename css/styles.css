@@ -377,3 +377,21 @@ body {
   margin: 0;
   line-height: 1.5;
 }
+
+.portfolio-thumb-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-overlay {
+  display: none;
+  position: absolute;
+  inset: 0;
+  background: rgba(33, 150, 243, 0.9);
+  color: #fff;
+  padding: 24px;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+  display: block;
+}
